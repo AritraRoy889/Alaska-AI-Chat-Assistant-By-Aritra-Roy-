@@ -1,14 +1,14 @@
 # Alaska: AI Chat Assistant
 
-Welcome to **Alaska**, a powerful, full-stack AI chatbot application built with a modern Retrieval-Augmented Generation (RAG) architecture. Designed to be your friendly and knowledgeable assistant, Alaska can process documents, analyze media, and hold contextual conversations effortlessly.
+Welcome to **Alaska**, a powerful, full-stack AI chatbot application built with a modern Retrieval-Augmented Generation (RAG) architecture. Designed to be your friendly and knowledgeable assistant,[...]
 
 ---
 
 ## 1. Project Overview
 
-Alaska is designed from the ground up to provide a seamless chat experience powered by Google's latest **Gemini 3.5 Flash** model. It features a sleek, dark-themed UI built with React and a robust, high-performance backend powered by FastAPI. 
+Alaska is designed from the ground up to provide a seamless chat experience powered by Google's latest **Gemini 3.5 Flash** model. It features a sleek, dark-themed UI built with React and a robust,[...]
 
-Unlike traditional chatbots, Alaska features a custom-built RAG pipeline. This means you can upload your own PDFs, Word documents, and text files, and Alaska will chunk, embed, and search through them using **ChromaDB** to answer your questions accurately based on your own data.
+Unlike traditional chatbots, Alaska features a custom-built RAG pipeline. This means you can upload your own PDFs, Word documents, and text files, and Alaska will chunk, embed, and search through [...]
 
 ---
 
@@ -129,25 +129,53 @@ A clean and modern login/signup interface to keep your chat sessions secure.
 The main dashboard where you can talk to Alaska, manage your conversation history, search through past RAG queries, and upload your files.
 ![Chat Interface](assets/screenshot-4.png)
 
-## 7. Project Structure
+---
 
-here is the whole project structure 
+## 7. Project structure
 
-Alaska/
-├── backend/
-│   ├── routers/
-│   ├── services/
-│   ├── database/
-│   ├── vector_store/
-│   ├── main.py
-│   ├── config.py
-│   ├── requirements.txt
-│   └── .gitignore
-├── frontend/
+Below is a clear, consistent project tree. I updated this to be descriptive and easy to follow — it reflects the canonical layout for this project. If you want I can also scan the repository and make the tree match exactly.
+
+Alaska-AI-Chat-Assistant-By-Aritra-Roy-/
+├── README.md                      # Project overview and setup (this file)
+├── .gitignore
+├── assets/                         # Images, videos and other media used in the README or UI
+│   ├── screenshot-1.png
+│   ├── screenshot-2.png
+│   ├── screenshot-3.png
+│   ├── screenshot-4.png
+│   └── Alaska_project_video (1).mp4
+├── backend/                        # FastAPI backend and RAG pipeline
+│   ├── main.py                     # FastAPI application entrypoint
+│   ├── requirements.txt            # Python dependencies
+│   ├── .env.example                # Example environment variables
+│   ├── app/                        # Application package
+│   │   ├── api/                    # API route handlers (chat, upload, auth, etc.)
+│   │   ├── core/                   # Core logic, configuration, and settings
+│   │   ├── db/                     # Database models and migrations (SQLAlchemy)
+│   │   ├── rag/                    # RAG pipeline: chunking, embeddings, vectorstore integration
+│   │   ├── services/               # Gemini client wrapper, embedding helpers
+│   │   └── utils/                  # Helper utilities (file parsing, audio/video helpers)
+│   └── tests/                      # Backend tests
+├── frontend/                       # React + Vite frontend
+│   ├── package.json                # Node dependencies and scripts
+│   ├── vite.config.ts
+│   ├── public/                     # Static assets
 │   ├── src/
-│   ├── public/
-│   ├── index.html
-│   ├── package.json
-│   ├── vite.config.js
-│   └── .env (only if it has NO secrets — see below)
-└── README.md
+│   │   ├── main.tsx                # React entrypoint
+│   │   ├── App.tsx
+│   │   ├── index.css               # Global styles
+│   │   ├── components/             # Reusable UI components
+│   │   ├── pages/                  # Page-level components (Chat, Auth, Dashboard)
+│   │   ├── hooks/                  # Custom React hooks
+│   │   └── services/               # API client & utilities
+│   └── tests/                      # Frontend tests
+└── docs/                           # Optional documentation and design assets
+    └── (architecture, diagrams...)
+
+Notes:
+- If your actual repo uses slightly different filenames or folders, treat the structure above as a canonical reference — update the README if you prefer exact matching to the repo.
+- Keep `.env` files out of source control (use `.env.example` instead).
+
+---
+
+If you want me to commit a version where the tree is generated from the repo (exact filenames and folders), say "Yes — scan and commit exact tree" and I'll scan and update the README accordingly.
