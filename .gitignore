@@ -1,0 +1,19 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.env
+backend/alaska.db
+backend/chroma_db/
+backend/chroma.sqlite3
+
+# Node
+frontend/node_modules/
+frontend/.env
+frontend/dist/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+*.pyc

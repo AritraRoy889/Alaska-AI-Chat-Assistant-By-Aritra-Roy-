@@ -1,0 +1,26 @@
+# .gitignore for the Alaska backend
+# ─────────────────────────────────────────────
+
+# Python virtual environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment file – contains API keys, never commit this
+.env
+
+# Database files
+*.db
+*.db-journal
+
+# ChromaDB local persistence
+chroma_db/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db

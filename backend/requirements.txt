@@ -1,0 +1,28 @@
+# ─────────────────────────────────────────────
+# Dependencies – Alaska RAG Backend
+# ─────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+python-dotenv>=1.0.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Vector database (chromadb pulls in numpy, onnxruntime – all have 3.14 wheels)
+chromadb>=0.6.0
+
+# Google Gemini SDK
+google-genai>=2.12.0
+
+# Document parsing
+PyPDF2>=3.0.0
+pdfplumber>=0.11.0
+python-docx>=1.1.0
+
+# Utilities (no version pins – let pip pick wheels for Python 3.14)
+httpx>=0.27.0
+pydantic>=2.9.0
+pydantic-settings>=2.3.0
+aiofiles>=23.2.0
+
