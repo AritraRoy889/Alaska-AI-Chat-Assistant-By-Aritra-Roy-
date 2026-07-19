@@ -144,38 +144,26 @@ Alaska-AI-Chat-Assistant-By-Aritra-Roy-/
 │   ├── screenshot-3.png
 │   ├── screenshot-4.png
 │   └── Alaska_project_video (1).mp4
-├── backend/                        # FastAPI backend and RAG pipeline
-│   ├── main.py                     # FastAPI application entrypoint
-│   ├── requirements.txt            # Python dependencies
-│   ├── .env.example                # Example environment variables
-│   ├── app/                        # Application package
-│   │   ├── api/                    # API route handlers (chat, upload, auth, etc.)
-│   │   ├── core/                   # Core logic, configuration, and settings
-│   │   ├── db/                     # Database models and migrations (SQLAlchemy)
-│   │   ├── rag/                    # RAG pipeline: chunking, embeddings, vectorstore integration
-│   │   ├── services/               # Gemini client wrapper, embedding helpers
-│   │   └── utils/                  # Helper utilities (file parsing, audio/video helpers)
-│   └── tests/                      # Backend tests
-├── frontend/                       # React + Vite frontend
-│   ├── package.json                # Node dependencies and scripts
-│   ├── vite.config.ts
-│   ├── public/                     # Static assets
+├── backend/
+│   ├── routers/
+│   ├── services/
+│   ├── database/
+│   ├── vector_store/
+│   ├── main.py
+│   ├── config.py
+│   ├── requirements.txt
+│   └── .gitignore
+├── frontend/
 │   ├── src/
-│   │   ├── main.tsx                # React entrypoint
-│   │   ├── App.tsx
-│   │   ├── index.css               # Global styles
-│   │   ├── components/             # Reusable UI components
-│   │   ├── pages/                  # Page-level components (Chat, Auth, Dashboard)
-│   │   ├── hooks/                  # Custom React hooks
-│   │   └── services/               # API client & utilities
-│   └── tests/                      # Frontend tests
-└── docs/                           # Optional documentation and design assets
-    └── (architecture, diagrams...)
+│   ├── public/
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── .env (only if it has NO secrets — see below)
+└── README.md
 
-Notes:
-- If your actual repo uses slightly different filenames or folders, treat the structure above as a canonical reference — update the README if you prefer exact matching to the repo.
-- Keep `.env` files out of source control (use `.env.example` instead).
+## Future updates
 
----
-
-If you want me to commit a version where the tree is generated from the repo (exact filenames and folders), say "Yes — scan and commit exact tree" and I'll scan and update the README accordingly.
+1. Adding security to the log in and create account section and password strictness
+2. Adding more LLM models.
+3. Integrating Avatars for role based chat assistance
