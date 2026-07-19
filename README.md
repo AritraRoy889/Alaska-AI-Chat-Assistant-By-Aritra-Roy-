@@ -128,3 +128,26 @@ A clean and modern login/signup interface to keep your chat sessions secure.
 ### The Chat Interface
 The main dashboard where you can talk to Alaska, manage your conversation history, search through past RAG queries, and upload your files.
 ![Chat Interface](assets/screenshot-4.png)
+
+## 7. Project Structure
+
+here is the whole project structure 
+
+Alaska/
+├── backend/
+│   ├── routers/
+│   ├── services/
+│   ├── database/
+│   ├── vector_store/
+│   ├── main.py
+│   ├── config.py
+│   ├── requirements.txt
+│   └── .gitignore
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── .env (only if it has NO secrets — see below)
+└── README.md
