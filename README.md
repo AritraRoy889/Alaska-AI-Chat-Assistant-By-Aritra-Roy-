@@ -164,6 +164,7 @@ Alaska-AI-Chat-Assistant-By-Aritra-Roy-/
 
 ## Future updates
 
-1. Adding security to the log in and create account section and password strictness
+1. Adding security to the log in and create account section and password strictness.
 2. Adding more LLM models.
-3. Integrating Avatars for role based chat assistance
+3. Integrating Avatars for role based chat assistance.
+4. Improvement of the file & media uploading system.
